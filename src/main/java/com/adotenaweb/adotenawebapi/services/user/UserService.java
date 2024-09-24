@@ -19,10 +19,10 @@ public class UserService {
 
     public User registerUser(UserRegistrationDTO registrationDTO) {
         if (userRepository.existsByEmail(registrationDTO.getEmail())) {
-            throw new UserAlreadyExistsException("Email already in use");
+            throw new UserAlreadyExistsException("User with this email already exists");
         }
         if (userRepository.existsByPhone(registrationDTO.getPhone())) {
-            throw new UserAlreadyExistsException("Phone number already in use");
+            throw new UserAlreadyExistsException("User with this phone number already exists");
         }
 
         User user = new User();
