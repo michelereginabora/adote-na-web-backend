@@ -29,7 +29,7 @@ Este é um projeto open-source e estamos abertos a contribuições! Por favor, l
 
 ## Documentação
 
-Para informações detalhadas sobre a API e como usar este backend, consulte nossa [Documentação](DOCUMENTATION.md).
+Para informações detalhadas sobre a API e como usar este backend, consulte nossa [Documentação](https://github.com/michelereginabora/adote-na-web-backend/wiki/Documenta%C3%A7%C3%A3o).
 
 ## Licença
 
