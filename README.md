@@ -27,9 +27,9 @@ O Adote na Web é uma iniciativa open-source que visa criar uma rede de apoio pa
 
 Este é um projeto open-source e estamos abertos a contribuições! Por favor, leia nosso [Guia de Contribuição](CONTRIBUTING.md) para saber como você pode participar.
 
-## Documentação
+## Documentação (Wiki)
 
-Para informações detalhadas sobre a API e como usar este backend, consulte nossa [Documentação](https://github.com/michelereginabora/adote-na-web-backend/wiki/Documenta%C3%A7%C3%A3o).
+Para informações detalhadas sobre a API e como usar este backend, consulte nosso [WIKI](https://github.com/michelereginabora/adote-na-web-backend/wiki).
 
 ## Licença
 
