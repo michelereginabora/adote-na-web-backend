@@ -6,6 +6,7 @@ import com.adotenaweb.adotenawebapi.models.dtos.auth.AuthenticationDTO;
 import com.adotenaweb.adotenawebapi.models.entities.user.User;
 import com.adotenaweb.adotenawebapi.security.TokenService;
 import com.adotenaweb.adotenawebapi.services.auth.AuthenticationService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +22,7 @@ public class AuthenticationController {
     TokenService tokenService;
 
     @PostMapping("/login")
-    public ResponseEntity<?> loginUser(@RequestBody AuthenticationDTO authDTO) {
+    public ResponseEntity<?> loginUser(@Valid @RequestBody AuthenticationDTO authDTO) {
         User auth = authenticationService.authenticateUser(authDTO);
 
         var token = tokenService.generateToken(auth);
