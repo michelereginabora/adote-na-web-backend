@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class AdoteNaWebApiApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(AdoteNaWebApiApplication.class, args);
-	}
-
+  public static void main(String[] args) {
+    SpringApplication.run(AdoteNaWebApiApplication.class, args);
+  }
 }

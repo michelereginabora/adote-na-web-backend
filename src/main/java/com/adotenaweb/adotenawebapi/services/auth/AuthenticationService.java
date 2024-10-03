@@ -12,20 +12,20 @@ import org.springframework.stereotype.Service;
 @Service
 public class AuthenticationService {
 
-    @Autowired
-    private UserRepository userRepository;
+  @Autowired private UserRepository userRepository;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+  @Autowired private PasswordEncoder passwordEncoder;
 
-    public User authenticateUser(AuthenticationDTO authDTO) {
-        UserDetails userDetails = userRepository.findByPhone(authDTO.getPhone())
-                .orElseThrow(() -> new InvalidCredentialsException("User not found"));
+  public User authenticateUser(AuthenticationDTO authDTO) {
+    UserDetails userDetails =
+        userRepository
+            .findByPhone(authDTO.getPhone())
+            .orElseThrow(() -> new InvalidCredentialsException("User not found"));
 
-        if (!passwordEncoder.matches(authDTO.getPassword(), userDetails.getPassword())) {
-            throw new InvalidCredentialsException("Invalid password");
-        }
-
-        return (User) userDetails;
+    if (!passwordEncoder.matches(authDTO.getPassword(), userDetails.getPassword())) {
+      throw new InvalidCredentialsException("Invalid password");
     }
+
+    return (User) userDetails;
+  }
 }
