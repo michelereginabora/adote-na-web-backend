@@ -1,4 +1,4 @@
-package com.adotenaweb.adote_na_web_api;
+package com.adotenaweb.adotenawebapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
