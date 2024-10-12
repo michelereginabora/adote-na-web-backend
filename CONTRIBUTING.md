@@ -17,7 +17,7 @@ Obrigado por seu interesse em contribuir para o Adote na Web! Este guia ajudará
 
 ## Código de Conduta
 
-Este projeto e todos os participantes estão sob o [Código de Conduta](CODE_OF_CONDUCT.md). Ao participar, espera-se que você mantenha este código. Por favor, reporte comportamentos inaceitáveis para [micheleregina.dev@gmail.com].
+Este projeto e todos os participantes estão sob o [Código de Conduta](https://github.com/michelereginabora/adote-na-web-backend/blob/main/CODE_OF_CONDUCT.md). Ao participar, espera-se que você mantenha este código. Por favor, reporte comportamentos inaceitáveis para [micheleregina.dev@gmail.com].
 
 ## Como Posso Contribuir?
 
