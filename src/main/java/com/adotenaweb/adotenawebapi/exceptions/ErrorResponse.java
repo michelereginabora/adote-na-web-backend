@@ -8,7 +8,6 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 public class ErrorResponse {
-  // Getters and setters
   private int status;
   private String message;
 }
