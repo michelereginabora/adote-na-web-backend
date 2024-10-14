@@ -12,27 +12,25 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
 
-    @Autowired
-    private UserRepository userRepository;
+  @Autowired private UserRepository userRepository;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+  @Autowired private PasswordEncoder passwordEncoder;
 
-    public void registerUser(UserRegistrationDTO registrationDTO) {
-        if (userRepository.existsByEmail(registrationDTO.getEmail())) {
-            throw new UserAlreadyExistsException("User with this email already exists");
-        }
-        if (userRepository.existsByPhone(registrationDTO.getPhone())) {
-            throw new UserAlreadyExistsException("User with this phone number already exists");
-        }
-
-        User user = new User();
-        user.setName(registrationDTO.getName());
-        user.setEmail(registrationDTO.getEmail());
-        user.setPhone(registrationDTO.getPhone());
-        user.setPassword(passwordEncoder.encode(registrationDTO.getPassword()));
-        user.setRole(UserRole.USER);
-
-        userRepository.save(user);
+  public void registerUser(UserRegistrationDTO registrationDTO) {
+    if (userRepository.existsByEmail(registrationDTO.getEmail())) {
+      throw new UserAlreadyExistsException("User with this email already exists");
     }
+    if (userRepository.existsByPhone(registrationDTO.getPhone())) {
+      throw new UserAlreadyExistsException("User with this phone number already exists");
+    }
+
+    User user = new User();
+    user.setName(registrationDTO.getName());
+    user.setEmail(registrationDTO.getEmail());
+    user.setPhone(registrationDTO.getPhone());
+    user.setPassword(passwordEncoder.encode(registrationDTO.getPassword()));
+    user.setRole(UserRole.USER);
+
+    userRepository.save(user);
+  }
 }
